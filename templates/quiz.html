@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Quiz</title>
+		<style>
+			body {
+				position: relative;
+				min-height: 100vh;
+			}
+
+			footer {
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				text-align: center;
+			}
+		</style>
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+			crossorigin="anonymous"
+		/>
+	</head>
+	<body>
+		<main class="container my-">
+			<h1>Quiz</h1>
+			<form method="post" class="form">
+				<!-- Question about the user's name -->
+				<div class="mb-3">
+					<label for="exampleFormControlInput1" class="form-label"
+						>Question 1: What is your name?</label
+					>
+					<input
+						type="text"
+						name="username"
+						class="form-control"
+						id="exampleFormControlInput1"
+						placeholder="Your name"
+					/>
+				</div>
+
+				<!-- First question with multiple choice -->
+				<h6>Question 2: What is your favorite color?</h6>
+				<div class="form-check">
+					<input
+						class="form-check-input"
+						type="radio"
+						name="question1"
+						value="red"
+						id="Red"
+					/>
+					<label class="form-check-label" for="Red"> Red </label>
+				</div>
+				<div class="form-check">
+					<input
+						class="form-check-input"
+						type="radio"
+						name="question1"
+						value="blue"
+						id="Blue"
+					/>
+					<label class="form-check-label" for="Blue"> Blue </label>
+				</div>
+				<div class="form-check">
+					<input
+						class="form-check-input"
+						type="radio"
+						name="question1"
+						value="green"
+						id="Green"
+					/>
+					<label class="form-check-label" for="Green"> Green </label>
+				</div>
+
+				<!-- Second question with multiple choice -->
+				<h6>Question 3: What is your favorite animal?</h6>
+				<div class="form-check">
+					<input
+						class="form-check-input"
+						type="radio"
+						name="question2"
+						value="dog"
+						id="Dog"
+					/>
+					<label class="form-check-label" for="Dog"> Dog </label>
+				</div>
+				<div class="form-check">
+					<input
+						class="form-check-input"
+						type="radio"
+						name="question2"
+						value="cat"
+						id="Cat"
+					/>
+					<label class="form-check-label" for="Cat"> Cat </label>
+				</div>
+				<div class="form-check">
+					<input
+						class="form-check-input"
+						type="radio"
+						name="question2"
+						value="parrot"
+						id="Parrot"
+					/>
+					<label class="form-check-label" for="Parrot"> Parrot </label>
+				</div>
+
+				<!-- Third question with a text input -->
+                <h6>Question 4: </h6>
+				<div class="input-group">
+					<span class="input-group-text">Describe your hobbies or interests:</span>
+					<textarea class="form-control" name="question3" rows="4" cols="50" aria-label="With textarea"></textarea>
+				</div>
+
+				<br />
+				<input type="submit" class="btn btn-success" value="Submit Answers" />
+
+				<!-- User's best score in the top right corner -->
+				<div style="position: absolute; top: 10px; right: 10px">
+					<p>Best Score: {{ highest_score }}%</p>
+				</div>
+			</form>
+
+			<!-- Footer with information about the author -->
+			<footer>The author is your best teacher and your best friend who is Fatih</footer>
+		</main>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+			crossorigin="anonymous"
+		></script>
+	</body>
+</html>
